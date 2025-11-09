@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/nord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="152dp"
+        android:layout_marginEnd="151dp"
+        android:layout_marginBottom="72dp"
+        android:text="Nord"
+        app:layout_constraintBottom_toTopOf="@+id/direction"
+        app:layout_constraintEnd_toEndOf="@+id/est"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/count" />
+
+    <Button
+        android:id="@+id/sud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginBottom="152dp"
+        android:text="Sud"
+        app:layout_constraintBottom_toTopOf="@+id/secondActivity"
+        app:layout_constraintStart_toEndOf="@+id/vest"
+        app:layout_constraintTop_toBottomOf="@+id/direction" />
+
+    <Button
+        android:id="@+id/vest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:text="Vest"
+        app:layout_constraintBaseline_toBaselineOf="@+id/direction"
+        app:layout_constraintEnd_toStartOf="@+id/direction"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/est"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="242dp"
+        android:layout_marginEnd="20dp"
+        android:text="Est"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/direction"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/direction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="86dp"
+        app:layout_constraintBottom_toTopOf="@+id/sud"
+        app:layout_constraintEnd_toStartOf="@+id/est"
+        app:layout_constraintStart_toEndOf="@+id/vest"
+        app:layout_constraintTop_toBottomOf="@+id/nord"
+        android:saveEnabled="false"/>
+
+    <Button
+        android:id="@+id/secondActivity"
+        android:layout_width="134dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginBottom="94dp"
+        android:text="Second Activity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sud" />
+
+    <TextView
+        android:id="@+id/count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginBottom="61dp"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@+id/nord"
+        app:layout_constraintStart_toStartOf="@+id/nord"
+        app:layout_constraintTop_toTopOf="parent"
+        android:saveEnabled="false"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
